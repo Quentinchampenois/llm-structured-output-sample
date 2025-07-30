@@ -2,14 +2,6 @@
 
 This Python script utilizes a Large Language Model (LLM) to classify messages as either "SPAM" or "NOT_SPAM". It provides a simple interactive interface to test the model's capabilities.
 
-## Installation
-
-1.  **Install OpenAI Python Library:**
-
-    ```bash
-    uv sync
-    ```
-
 ## Prerequisites
 
 *   **OpenAI API Key:**  You'll need an OpenAI API key to run this script. Obtain one from [https://platform.openai.com/](https://platform.openai.com/).
@@ -19,6 +11,7 @@ This Python script utilizes a Large Language Model (LLM) to classify messages as
     *   `CLOUD_API_KEY`: Your OpenAI API key.
 
     You can set these environment variables in your terminal before running the script, or in your `.bashrc` or equivalent configuration file.
+*   **uv** package manager
 
 ## Usage
 
@@ -58,9 +51,20 @@ This Python script utilizes a Large Language Model (LLM) to classify messages as
 If you enter "1" (the spam message), the output will be:
 `SPAM`
 
+```
+$ uv run --env-file .env main.py
+
+Send content for spam analysis by a LLM.
+Sample messages :
+(SPAM) 1. Buy V-Bucks for free at http://perdu.com !
+(NOT_SPAM) 2. More trees in our streets !
+Type your own message or select 1 or 2 to continue.
+> 2
+Spam analysis result: NOT_SPAM
+```
+
 ## Resources
 
 * [Scaleway Generative API](https://www.scaleway.com/en/docs/generative-apis/)
 * [Pydantic doc](https://docs.pydantic.dev/2.11/)
 * [uv repository](https://github.com/astral-sh/uv)
-* 
